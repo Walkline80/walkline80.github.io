@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>从零开始：架设PC版Minecraft服务器（上） | 走线王的笔记 - Walkline Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x56FE;&amp;#x7247;&amp;#x4E0A;&amp;#x5199;&amp;#x7684;&amp;#x5F88;&amp;#x6E05;&amp;#x695A;&amp;#x8FD9;&amp;#x4E2A;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x662F;for PC/Mac&amp;#x7684;&amp;#xFF0C;&amp;#x8BF7;&amp;#x4E0D;&amp;#x8981;&amp;#x8BEF;&amp;#x4F1A;&amp;#x4E3A;&amp;#x5176;&amp;#x5B">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始：架设PC版Minecraft服务器（上）">
+<meta property="og:url" content="http://walkline.wang/2016/07/04/Start-Minecraft-Server-01/index.html">
+<meta property="og:site_name" content="走线王的笔记">
+<meta property="og:description" content="&amp;#x56FE;&amp;#x7247;&amp;#x4E0A;&amp;#x5199;&amp;#x7684;&amp;#x5F88;&amp;#x6E05;&amp;#x695A;&amp;#x8FD9;&amp;#x4E2A;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x662F;for PC/Mac&amp;#x7684;&amp;#xFF0C;&amp;#x8BF7;&amp;#x4E0D;&amp;#x8981;&amp;#x8BEF;&amp;#x4F1A;&amp;#x4E3A;&amp;#x5176;&amp;#x5B">
+<meta property="og:image" content="http://walkline.wang/2016/07/04/Start-Minecraft-Server-01/01.png">
+<meta property="og:updated_time" content="2016-07-05T05:27:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从零开始：架设PC版Minecraft服务器（上）">
+<meta name="twitter:description" content="&amp;#x56FE;&amp;#x7247;&amp;#x4E0A;&amp;#x5199;&amp;#x7684;&amp;#x5F88;&amp;#x6E05;&amp;#x695A;&amp;#x8FD9;&amp;#x4E2A;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x662F;for PC/Mac&amp;#x7684;&amp;#xFF0C;&amp;#x8BF7;&amp;#x4E0D;&amp;#x8981;&amp;#x8BEF;&amp;#x4F1A;&amp;#x4E3A;&amp;#x5176;&amp;#x5B">
+<meta name="twitter:image" content="http://walkline.wang/2016/07/04/Start-Minecraft-Server-01/01.png">
+  
+    <link rel="alternative" href="/atom.xml" title="走线王的笔记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/logo.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Walkline</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Walkline Studio</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">归档</a></li>
+				        
+							<li><a href="http://books.walkline.wang">私人书库</a></li>
+				        
+							<li><a href="/gallery">图库</a></li>
+				        
+							<li><a href="http://ota.walkline.wang">OTA</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="weibo" target="_blank" href="http://weibo.com/316828880" title="weibo">weibo</a>
+					        
+								<a class="github" target="_blank" href="https://github.com/walkline80" title="github">github</a>
+					        
+								<a class="bitbucket" target="_blank" href="https://bitbucket.org/WalklineWang" title="bitbucket">bitbucket</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/App/" style="font-size: 20px;">App</a> <a href="/tags/BBW/" style="font-size: 17.5px;">BBW</a> <a href="/tags/BlackBerry/" style="font-size: 17.5px;">BlackBerry</a> <a href="/tags/Game/" style="font-size: 10px;">Game</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/Minecraft/" style="font-size: 12.5px;">Minecraft</a> <a href="/tags/PhoneGap/" style="font-size: 10px;">PhoneGap</a> <a href="/tags/Server/" style="font-size: 12.5px;">Server</a> <a href="/tags/Tools/" style="font-size: 15px;">Tools</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/regex/" style="font-size: 10px;">regex</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.kealin.net/Index.html">晴翠荒城</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">操蛋的生活只好自娱自乐，我发现我也爱吐槽了。BB PIN：7BA19E23，Callsign：BH3ATN</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Walkline</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/logo.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Walkline</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Walkline Studio</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">归档</a></li>
+		        
+					<li><a href="http://books.walkline.wang">私人书库</a></li>
+		        
+					<li><a href="/gallery">图库</a></li>
+		        
+					<li><a href="http://ota.walkline.wang">OTA</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="weibo" target="_blank" href="http://weibo.com/316828880" title="weibo">weibo</a>
+			        
+						<a class="github" target="_blank" href="https://github.com/walkline80" title="github">github</a>
+			        
+						<a class="bitbucket" target="_blank" href="https://bitbucket.org/WalklineWang" title="bitbucket">bitbucket</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Start-Minecraft-Server-01" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/04/Start-Minecraft-Server-01/" class="article-date">
+  	<time datetime="2016-07-04T07:40:40.000Z" itemprop="datePublished">2016-07-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      从零开始：架设PC版Minecraft服务器（上）
+    </h1>
+  
+
+      </header>
+      
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/App/">App</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Minecraft/">Minecraft</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server/">Server</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tools/">Tools</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<div id="toc" class="toc-article">
+    <div class="toc-title">目录</div>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、下载服务器文件"><span class="toc-text">1、下载服务器文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、下载Java运行库"><span class="toc-text">2、下载Java运行库</span></a></li></ol>
+</div>
+      	<p><img src="/2016/07/04/Start-Minecraft-Server-01/01.png" alt="&#x9547;&#x697C;&#x56FE;"></p>
+<pre><code>&#x56FE;&#x7247;&#x4E0A;&#x5199;&#x7684;&#x5F88;&#x6E05;&#x695A;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x662F;for PC/Mac&#x7684;&#xFF0C;&#x8BF7;&#x4E0D;&#x8981;&#x8BEF;&#x4F1A;&#x4E3A;&#x5176;&#x5B83;&#x7248;&#x672C;&#x7684;&#x670D;&#x52A1;&#x5668;&#x554A;
+</code></pre><a id="more"></a>
+<p>&#x5176;&#x5B9E;&#x65B9;&#x6CD5;&#x5C31;&#x548C;&#x4E0A;&#x56FE;&#x8BF4;&#x7684;&#x4E00;&#x6837;&#x7B80;&#x5355;</p>
+<blockquote>
+<ol>
+<li>&#x4E0B;&#x8F7D;&#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;</li>
+<li>&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;</li>
+</ol>
+</blockquote>
+<p>&#x53EA;&#x4E0D;&#x8FC7;&#x8FD8;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#xFF0C;&#x4E3A;&#x4E86;&#x518D;&#x7B80;&#x5316;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x6211;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x5C0F;&#x5DE5;&#x5177;&#xFF0C;&#x96C6;&#x6210;&#x4E86; <code>&#x542F;&#x52A8;/&#x505C;&#x6B62;&#x670D;&#x52A1;&#x5668;</code>&#x3001;<code>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7F16;&#x8F91;&#x5668;</code> &#x548C; <code>&#x5FEB;&#x6377;tp&#x5DE5;&#x5177;</code> &#x7B49;&#x529F;&#x80FD;</p>
+<h3 id="1&#x3001;&#x4E0B;&#x8F7D;&#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;"><a href="#1&#x3001;&#x4E0B;&#x8F7D;&#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;" class="headerlink" title="1&#x3001;&#x4E0B;&#x8F7D;&#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;"></a>1&#x3001;&#x4E0B;&#x8F7D;&#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;</h3><p>&#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#x5728;<a href="https://minecraft.net/zh-hans/download/server" target="_blank" rel="external">&#x8FD9;&#x91CC;</a>&#xFF0C;&#x4E0D;&#x8FC7;&#x5B98;&#x7F51;&#x53EA;&#x80FD;&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;&#xFF08;&#x548C;&#x6E38;&#x620F;&#x7248;&#x672C;&#x540C;&#x6B65;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x73A9;&#x4E4B;&#x524D;&#x7248;&#x672C;&#x7684;&#x8FD8;&#x9700;&#x8981;&#x81EA;&#x884C;&#x641C;&#x7D22;&#x4E0B;&#x8F7D;</p>
+<h3 id="2&#x3001;&#x4E0B;&#x8F7D;Java&#x8FD0;&#x884C;&#x5E93;"><a href="#2&#x3001;&#x4E0B;&#x8F7D;Java&#x8FD0;&#x884C;&#x5E93;" class="headerlink" title="2&#x3001;&#x4E0B;&#x8F7D;Java&#x8FD0;&#x884C;&#x5E93;"></a>2&#x3001;&#x4E0B;&#x8F7D;Java&#x8FD0;&#x884C;&#x5E93;</h3><p>&#x5224;&#x65AD;&#x4F60;&#x7684;&#x7CFB;&#x7EDF;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x4E86;java&#x8FD0;&#x884C;&#x5E93;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#xFF1A;&#x5728;dos&#x7A97;&#x53E3;&#x8F93;&#x5165; <code>java</code> &#x5E76;&#x56DE;&#x8F66;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x4E0E;&#x4E0B;&#x9762;&#x7C7B;&#x4F3C;&#x7684;&#x5185;&#x5BB9;&#x5C31;&#x8BF4;&#x660E;<strong>&#x9700;&#x8981;</strong>&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x8FD0;&#x884C;&#x5E93;</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function">c:\&gt;<span class="title">java</span></span></div><div class="line">&#x7528;&#x6CD5;: <span class="title">java</span> [-<span class="title">options</span>] <span class="title">class</span> [<span class="title">args</span>...]</div><div class="line">           (&#x6267;&#x884C;&#x7C7B;)</div><div class="line">   &#x6216;  <span class="title">java</span> [-<span class="title">options</span>] -<span class="title">jar</span> <span class="title">jarfile</span> [<span class="title">args</span>...]</div><div class="line">           (&#x6267;&#x884C; <span class="title">jar</span> &#x6587;&#x4EF6;)</div><div class="line">&#x5176;&#x4E2D;&#x9009;&#x9879;&#x5305;&#x62EC;:</div><div class="line">    -<span class="title">d32</span>          &#x4F7F;&#x7528; 32 &#x4F4D;&#x6570;&#x636E;&#x6A21;&#x578B; (&#x5982;&#x679C;&#x53EF;&#x7528;)</div><div class="line">    -<span class="title">d64</span>          &#x4F7F;&#x7528; 64 &#x4F4D;&#x6570;&#x636E;&#x6A21;&#x578B; (&#x5982;&#x679C;&#x53EF;&#x7528;)</div><div class="line">    -<span class="title">server</span>       &#x9009;&#x62E9; &quot;<span class="title">server</span>&quot; <span class="title">VM</span></div><div class="line">                  &#x9ED8;&#x8BA4; <span class="title">VM</span> &#x662F; <span class="title">server</span>.</div><div class="line"></div><div class="line">    -<span class="title">cp</span> &lt;&#x76EE;&#x5F55;&#x548C; <span class="title">zip</span>/<span class="title">jar</span> &#x6587;&#x4EF6;&#x7684;&#x7C7B;&#x641C;&#x7D22;&#x8DEF;&#x5F84;&gt;</div><div class="line">    -<span class="title">classpath</span> &lt;&#x76EE;&#x5F55;&#x548C; <span class="title">zip</span>/<span class="title">jar</span> &#x6587;&#x4EF6;&#x7684;&#x7C7B;&#x641C;&#x7D22;&#x8DEF;&#x5F84;&gt;</div><div class="line">                  &#x7528; ; &#x5206;&#x9694;&#x7684;&#x76EE;&#x5F55;, <span class="title">JAR</span> &#x6863;&#x6848;</div><div class="line">                  &#x548C; <span class="title">ZIP</span> &#x6863;&#x6848;&#x5217;&#x8868;, &#x7528;&#x4E8E;&#x641C;&#x7D22;&#x7C7B;&#x6587;&#x4EF6;&#x3002;</div><div class="line">    -<span class="title">D</span>&lt;&#x540D;&#x79F0;&gt;=&lt;&#x503C;&gt;</div><div class="line">                  &#x8BBE;&#x7F6E;&#x7CFB;&#x7EDF;&#x5C5E;&#x6027;</div><div class="line">    -<span class="title">verbose</span>:[<span class="title">class</span>|<span class="title">gc</span>|<span class="title">jni</span>]</div><div class="line">                  &#x542F;&#x7528;&#x8BE6;&#x7EC6;&#x8F93;&#x51FA;</div><div class="line">    -<span class="title">version</span>      &#x8F93;&#x51FA;&#x4EA7;&#x54C1;&#x7248;&#x672C;&#x5E76;&#x9000;&#x51FA;</div><div class="line">......................................</div></pre></td></tr></table></figure>
+<p>&#x4E5F;&#x5C31;&#x662F;jre&#xFF0C;&#x6839;&#x636E;&#x4F60;&#x4F7F;&#x7528;&#x7684;Windows&#x9009;&#x62E9;x32&#x6216;x64&#x7248;&#x672C;&#x7684;&#xFF0C;&#x5EFA;&#x8BAE;&#x4E0B;&#x8F7D;jre1.8</p>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x662F;&#x901A;&#x8FC7;<a href="https://minecraft.net/zh-hans/download/" target="_blank" rel="external">&#x5B98;&#x65B9;&#x542F;&#x52A8;&#x5668;</a>&#x8FDB;&#x884C;&#x6E38;&#x620F;&#x7684;&#x4E0B;&#x8F7D;&#x548C;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x7684;&#x5B89;&#x88C5;&#xFF0C;&#x4E00;&#x952E;&#x641E;&#x5B9A;&#xFF01;</p>
+<pre><code>TO BE CONTINUED
+</code></pre><hr>
+<p><a href="/2016/07/05/Start-Minecraft-Server-02/index.html">&#x300A;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#xFF1A;&#x67B6;&#x8BBE;PC&#x7248;Minecraft&#x670D;&#x52A1;&#x5668;&#xFF08;&#x4E2D;&#xFF09;&#x300B;</a></p>
+
+      	
+	      <br />
+<div id="copyright" class="article-copyright">
+	<blockquote style="border-left:none;border-right: 5px solid #000;">
+    	欢迎转载，转载时请注明出处并保持转载后文章内容的完整性
+	</blockquote>
+</div>
+	    
+      
+    </div>
+    
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/05/Start-Minecraft-Server-02/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          从零开始：架设PC版Minecraft服务器（中）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/04/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<!--<a class="jiathis_button_facebook"></a> 
+    	<a class="jiathis_button_twitter"></a>
+		<a class="jiathis_button_tumblr"></a>
+    	<a class="jiathis_button_plus"></a>--> 
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Start-Minecraft-Server-01" data-title="从零开始：架设PC版Minecraft服务器（上）" data-url="http://walkline.wang/2016/07/04/Start-Minecraft-Server-01/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"walklinewang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy;2017 Walkline
+    		　　<a href="http://www.miitbeian.gov.cn/" title="津ICP备15004022号" target="_blank">津ICP备15004022号</a>
+    		　<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12011102000116" title="津公网安备12011102000116号" target="_blank">津公网安备12011102000116号</a>
+    	</div>
+      	<div class="footer-right">
+      		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259875656'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259875656' type='text/javascript'%3E%3C/script%3E"));</script>
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
