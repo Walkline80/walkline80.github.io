@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://walkline.wang/"/>
-  <updated>2018-01-12T07:50:25.701Z</updated>
+  <updated>2018-01-15T02:16:52.704Z</updated>
   <id>http://walkline.wang/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://walkline.wang/2018/01/12/learning-linux/"/>
     <id>http://walkline.wang/2018/01/12/learning-linux/</id>
     <published>2018-01-12T01:27:55.000Z</published>
-    <updated>2018-01-12T07:50:25.701Z</updated>
+    <updated>2018-01-15T02:16:52.704Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/2018/01/12/learning-linux/title.jpg&quot; alt=&quot;&amp;#x9547;&amp;#x697C;&amp;#x56FE;&quot;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;#x5728;&amp;#x653E;&amp;#x5F03;&amp;#x4E4B;&amp;#x524D;&amp;#x7528;&amp;#x5230;&amp;#x54EA;&amp;#x5B66;&amp;#x5230;&amp;#x54EA;&amp;#x5C31;&amp;#x8BB0;&amp;#x5F55;&amp;#x5230;&amp;#x54EA;&amp;#xFF0C;&amp;#x6392;&amp;#x540D;&amp;#x4E0D;&amp;#x5206;&amp;#x5148;&amp;#x540E;
 &lt;/code&gt;&lt;/pre&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;1&amp;#x3001;screen-&amp;#x547D;&amp;#x4EE4;&quot;&gt;&lt;a href=&quot;#1&amp;#x3001;screen-&amp;#x547D;&amp;#x4EE4;&quot; class=&quot;headerlink&quot; title=&quot;1&amp;#x3001;screen &amp;#x547D;&amp;#x4EE4;&quot;&gt;&lt;/a&gt;1&amp;#x3001;screen &amp;#x547D;&amp;#x4EE4;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;h3 id=&quot;1&amp;#x3001;screen-&amp;#x547D;&amp;#x4EE4;&quot;&gt;&lt;a href=&quot;#1&amp;#x3001;screen-&amp;#x547D;&amp;#x4EE4;&quot; class=&quot;headerlink&quot; title=&quot;1&amp;#x3001;screen &amp;#x547D;&amp;#x4EE4;&quot;&gt;&lt;/a&gt;&lt;strong&gt;1&amp;#x3001;screen &amp;#x547D;&amp;#x4EE4;&lt;/strong&gt;&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;&amp;#x76EE;&amp;#x6807;&amp;#xFF1A;&amp;#x5728;&amp;#x540E;&amp;#x53F0;&amp;#x8FD0;&amp;#x884C;Minecraft&amp;#x670D;&amp;#x52A1;&amp;#x5668;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&amp;#x5728;&lt;code&gt;bash&lt;/code&gt;&amp;#x4E0B;&amp;#x6D4B;&amp;#x8BD5;&amp;#x8FC7;&amp;#xFF0C;&amp;#x8FD0;&amp;#x884C;&lt;code&gt;Minecraft&amp;#x670D;&amp;#x52A1;&amp;#x5668;&lt;/code&gt;&amp;#x540E;&amp;#x6309;&lt;code&gt;ctrl+z&lt;/code&gt;&amp;#x5207;&amp;#x6362;&amp;#x4EFB;&amp;#x52A1;&amp;#xFF0C;&amp;#x591A;&amp;#x7B49;&amp;#x4E00;&amp;#x4F1A;&amp;#x518D;&amp;#x6309;&lt;code&gt;fg&lt;/code&gt;&amp;#x5207;&amp;#x6362;&amp;#x56DE;&amp;#x53BB;&amp;#xFF0C;&amp;#x53D1;&amp;#x73B0;&lt;code&gt;Minecraft&amp;#x670D;&amp;#x52A1;&amp;#x5668;&lt;/code&gt;&amp;#x5C31;&amp;#x505C;&amp;#x6B62;&amp;#x8FD0;&amp;#x884C;&amp;#x4E86;&lt;/p&gt;
@@ -75,6 +75,66 @@ There is a screen on:
 &lt;pre&gt;&lt;code&gt;root@ThinkPad:~/mcserver# screen -r 239
 
 root@ThinkPad:~/mcserver# screen -r mcserver
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;2&amp;#x3001;&amp;#x66F4;&amp;#x6362;&amp;#x963F;&amp;#x91CC;&amp;#x6E90;&quot;&gt;&lt;a href=&quot;#2&amp;#x3001;&amp;#x66F4;&amp;#x6362;&amp;#x963F;&amp;#x91CC;&amp;#x6E90;&quot; class=&quot;headerlink&quot; title=&quot;2&amp;#x3001;&amp;#x66F4;&amp;#x6362;&amp;#x963F;&amp;#x91CC;&amp;#x6E90;&quot;&gt;&lt;/a&gt;&lt;strong&gt;2&amp;#x3001;&amp;#x66F4;&amp;#x6362;&amp;#x963F;&amp;#x91CC;&amp;#x6E90;&lt;/strong&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x5907;&amp;#x4EFD;&lt;code&gt;sources.list&lt;/code&gt;&amp;#x6E90;&amp;#x5217;&amp;#x8868;&amp;#x6587;&amp;#x4EF6;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;root@ThinkPad:~# cp /etc/apt/sources.list /etc/apt/sources.list.bak
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x6253;&amp;#x5F00;&amp;#x6587;&amp;#x4EF6;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;root@ThinkPad:~# apt edit-sources
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x6E05;&amp;#x7A7A;&amp;#x6587;&amp;#x4EF6;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;:%d &amp;#xFF08;vim&amp;#x7F16;&amp;#x8F91;&amp;#x5668;&amp;#x666E;&amp;#x901A;&amp;#x6A21;&amp;#x5F0F;&amp;#x4E0B;&amp;#xFF09;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x7C98;&amp;#x8D34;&amp;#x4E0B;&amp;#x5217;&amp;#x5185;&amp;#x5BB9;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x4FDD;&amp;#x5B58;&amp;#x6587;&amp;#x4EF6;&amp;#x5E76;&amp;#x9000;&amp;#x51FA;vim&amp;#x7F16;&amp;#x8F91;&amp;#x5668;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;esc &amp;#xFF08;&amp;#x8FD4;&amp;#x56DE;vim&amp;#x666E;&amp;#x901A;&amp;#x6A21;&amp;#x5F0F;&amp;#xFF09;
+:wq &amp;#xFF08;&amp;#x4FDD;&amp;#x5B58;&amp;#x5E76;&amp;#x9000;&amp;#x51FA;vim&amp;#xFF09;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x4F7F;&amp;#x7528;&amp;#x963F;&amp;#x91CC;&amp;#x6E90;&amp;#x66F4;&amp;#x65B0;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;root@ThinkPad:~# apt update
+Hit:1 http://mirrors.aliyun.com/ubuntu xenial InRelease
+Hit:2 http://mirrors.aliyun.com/ubuntu xenial-updates InRelease
+Hit:3 http://mirrors.aliyun.com/ubuntu xenial-backports InRelease
+Hit:4 http://mirrors.aliyun.com/ubuntu xenial-security InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu xenial InRelease
+Hit:6 http://archive.canonical.com/ubuntu xenial InRelease
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+All packages are up to date.
+root@ThinkPad:~#
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x89E3;&amp;#x51B3;&amp;#x95EE;&amp;#x9898;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;#x5982;&amp;#x679C;&amp;#x51FA;&amp;#x73B0;&amp;#x5982;&amp;#x4E0B;&amp;#x63D0;&amp;#x793A;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;** (appstreamcli:970): CRITICAL **: Error while moving old database out of the way.
+AppStream cache update failed.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;#x5219;&amp;#x4F7F;&amp;#x7528;&amp;#x4E0B;&amp;#x9762;&amp;#x7684;&amp;#x547D;&amp;#x4EE4;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chmod 777 /var/cache/app-info/xapian/default -R
 &lt;/code&gt;&lt;/pre&gt;</content>
     
     <summary type="html">
@@ -87,26 +147,6 @@ root@ThinkPad:~/mcserver# screen -r mcserver
     
     
       <category term="linux" scheme="http://walkline.wang/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>捐赠我</title>
-    <link href="http://walkline.wang/2018/01/12/donate/"/>
-    <id>http://walkline.wang/2018/01/12/donate/</id>
-    <published>2018-01-11T17:10:49.540Z</published>
-    <updated>2017-04-18T14:11:38.418Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;/2018/01/12/donate/donate.jpg&quot; alt=&quot;donate&quot;&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/2018/01/12/donate/donate.jpg&quot; alt=&quot;donate&quot;&gt;&lt;/p&gt;
-
-    
-    </summary>
-    
     
   </entry>
   

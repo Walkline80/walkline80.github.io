@@ -14,7 +14,7 @@
 <meta property="og:description" content="&amp;#x5728;&amp;#x653E;&amp;#x5F03;&amp;#x4E4B;&amp;#x524D;&amp;#x7528;&amp;#x5230;&amp;#x54EA;&amp;#x5B66;&amp;#x5230;&amp;#x54EA;&amp;#x5C31;&amp;#x8BB0;&amp;#x5F55;&amp;#x5230;&amp;#x54EA;&amp;#xFF0C;&amp;#x6392;&amp;#x540D;&amp;#x4E0D;&amp;#x5206;&amp;#x5148;&amp;#x540E;">
 <meta property="og:image" content="http://walkline.wang/2018/01/12/learning-linux/title.jpg">
 <meta property="og:image" content="http://walkline.wang/2018/01/12/learning-linux/01.png">
-<meta property="og:updated_time" content="2018-01-12T07:50:25.701Z">
+<meta property="og:updated_time" content="2018-01-15T02:16:52.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux从入门到放弃">
 <meta name="twitter:description" content="&amp;#x5728;&amp;#x653E;&amp;#x5F03;&amp;#x4E4B;&amp;#x524D;&amp;#x7528;&amp;#x5230;&amp;#x54EA;&amp;#x5B66;&amp;#x5230;&amp;#x54EA;&amp;#x5C31;&amp;#x8BB0;&amp;#x5F55;&amp;#x5230;&amp;#x54EA;&amp;#xFF0C;&amp;#x6392;&amp;#x540D;&amp;#x4E0D;&amp;#x5206;&amp;#x5148;&amp;#x540E;">
@@ -247,12 +247,12 @@
       
       	<div id="toc" class="toc-article">
     <div class="toc-title">目录</div>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、screen-命令"><span class="toc-text">1、screen 命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#启动服务器"><span class="toc-text">启动服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#切换窗口"><span class="toc-text">切换窗口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#返回服务器窗口"><span class="toc-text">返回服务器窗口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除窗口"><span class="toc-text">删除窗口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方便记忆"><span class="toc-text">方便记忆</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、screen-命令"><span class="toc-text">1、screen 命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#启动服务器"><span class="toc-text">启动服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#切换窗口"><span class="toc-text">切换窗口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#返回服务器窗口"><span class="toc-text">返回服务器窗口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除窗口"><span class="toc-text">删除窗口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方便记忆"><span class="toc-text">方便记忆</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、更换阿里源"><span class="toc-text">2、更换阿里源</span></a></li></ol>
 </div>
       	<p><img src="/2018/01/12/learning-linux/title.jpg" alt="&#x9547;&#x697C;&#x56FE;"></p>
 <pre><code>&#x5728;&#x653E;&#x5F03;&#x4E4B;&#x524D;&#x7528;&#x5230;&#x54EA;&#x5B66;&#x5230;&#x54EA;&#x5C31;&#x8BB0;&#x5F55;&#x5230;&#x54EA;&#xFF0C;&#x6392;&#x540D;&#x4E0D;&#x5206;&#x5148;&#x540E;
 </code></pre><a id="more"></a>
-<h3 id="1&#x3001;screen-&#x547D;&#x4EE4;"><a href="#1&#x3001;screen-&#x547D;&#x4EE4;" class="headerlink" title="1&#x3001;screen &#x547D;&#x4EE4;"></a>1&#x3001;screen &#x547D;&#x4EE4;</h3><blockquote>
+<h3 id="1&#x3001;screen-&#x547D;&#x4EE4;"><a href="#1&#x3001;screen-&#x547D;&#x4EE4;" class="headerlink" title="1&#x3001;screen &#x547D;&#x4EE4;"></a><strong>1&#x3001;screen &#x547D;&#x4EE4;</strong></h3><blockquote>
 <p>&#x76EE;&#x6807;&#xFF1A;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;Minecraft&#x670D;&#x52A1;&#x5668;</p>
 </blockquote>
 <p>&#x5728;<code>bash</code>&#x4E0B;&#x6D4B;&#x8BD5;&#x8FC7;&#xFF0C;&#x8FD0;&#x884C;<code>Minecraft&#x670D;&#x52A1;&#x5668;</code>&#x540E;&#x6309;<code>ctrl+z</code>&#x5207;&#x6362;&#x4EFB;&#x52A1;&#xFF0C;&#x591A;&#x7B49;&#x4E00;&#x4F1A;&#x518D;&#x6309;<code>fg</code>&#x5207;&#x6362;&#x56DE;&#x53BB;&#xFF0C;&#x53D1;&#x73B0;<code>Minecraft&#x670D;&#x52A1;&#x5668;</code>&#x5C31;&#x505C;&#x6B62;&#x8FD0;&#x884C;&#x4E86;</p>
@@ -302,6 +302,66 @@ There is a screen on:
 <pre><code>root@ThinkPad:~/mcserver# screen -r 239
 
 root@ThinkPad:~/mcserver# screen -r mcserver
+</code></pre><h3 id="2&#x3001;&#x66F4;&#x6362;&#x963F;&#x91CC;&#x6E90;"><a href="#2&#x3001;&#x66F4;&#x6362;&#x963F;&#x91CC;&#x6E90;" class="headerlink" title="2&#x3001;&#x66F4;&#x6362;&#x963F;&#x91CC;&#x6E90;"></a><strong>2&#x3001;&#x66F4;&#x6362;&#x963F;&#x91CC;&#x6E90;</strong></h3><ul>
+<li>&#x5907;&#x4EFD;<code>sources.list</code>&#x6E90;&#x5217;&#x8868;&#x6587;&#x4EF6;</li>
+</ul>
+<pre><code>root@ThinkPad:~# cp /etc/apt/sources.list /etc/apt/sources.list.bak
+</code></pre><ul>
+<li>&#x6253;&#x5F00;&#x6587;&#x4EF6;</li>
+</ul>
+<pre><code>root@ThinkPad:~# apt edit-sources
+</code></pre><ul>
+<li>&#x6E05;&#x7A7A;&#x6587;&#x4EF6;</li>
+</ul>
+<pre><code>:%d &#xFF08;vim&#x7F16;&#x8F91;&#x5668;&#x666E;&#x901A;&#x6A21;&#x5F0F;&#x4E0B;&#xFF09;
+</code></pre><ul>
+<li>&#x7C98;&#x8D34;&#x4E0B;&#x5217;&#x5185;&#x5BB9;</li>
+</ul>
+<pre><code>deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
+</code></pre><ul>
+<li>&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x5E76;&#x9000;&#x51FA;vim&#x7F16;&#x8F91;&#x5668;</li>
+</ul>
+<pre><code>esc &#xFF08;&#x8FD4;&#x56DE;vim&#x666E;&#x901A;&#x6A21;&#x5F0F;&#xFF09;
+:wq &#xFF08;&#x4FDD;&#x5B58;&#x5E76;&#x9000;&#x51FA;vim&#xFF09;
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x6E90;&#x66F4;&#x65B0;</li>
+</ul>
+<pre><code>root@ThinkPad:~# apt update
+Hit:1 http://mirrors.aliyun.com/ubuntu xenial InRelease
+Hit:2 http://mirrors.aliyun.com/ubuntu xenial-updates InRelease
+Hit:3 http://mirrors.aliyun.com/ubuntu xenial-backports InRelease
+Hit:4 http://mirrors.aliyun.com/ubuntu xenial-security InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu xenial InRelease
+Hit:6 http://archive.canonical.com/ubuntu xenial InRelease
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+All packages are up to date.
+root@ThinkPad:~#
+</code></pre><ul>
+<li>&#x89E3;&#x51B3;&#x95EE;&#x9898;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x63D0;&#x793A;</p>
+<pre><code>** (appstreamcli:970): CRITICAL **: Error while moving old database out of the way.
+AppStream cache update failed.
+</code></pre><p>&#x5219;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;</p>
+<pre><code>chmod 777 /var/cache/app-info/xapian/default -R
 </code></pre>
       	
 	      <br />
@@ -321,8 +381,8 @@ root@ThinkPad:~/mcserver# screen -r mcserver
 <nav id="article-nav">
   
   
-    <a href="/2018/01/12/donate/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">捐赠我</div>
+    <a href="/2018/01/12/A-Novel-Site-Import-Help/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">导入书籍管理模块使用说明</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -356,15 +416,14 @@ root@ThinkPad:~/mcserver# screen -r mcserver
 
 
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" style="padding:0px 40px;width:auto"></div> 
+<div id="SOHUCS" style="padding:0px 40px;width:auto"></div>
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cysYMc6vo'; 
 var conf = 'prod_b5210cddfc853046043fca4503a7e07e'; 
 var width = window.innerWidth || document.documentElement.clientWidth; 
 if (width < 960) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
 
 
 
@@ -378,7 +437,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
     		　<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12011102000116" title="津公网安备12011102000116号" target="_blank">津公网安备12011102000116号</a>
     	</div>
       	<div class="footer-right">
-      		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259875656'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259875656' type='text/javascript'%3E%3C/script%3E"));</script>
+      		<script src="https://s95.cnzz.com/z_stat.php?id=1259875656&web_id=1259875656" type="text/javascript"></script>
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
     </div>
