@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://walkline.wang/2018/01/12/learning-linux/</loc>
+    <lastmod>2018-01-22T02:01:59.540Z</lastmod>
+    <data>
+        <display>
+        <title>Linux从入门到放弃</title>
+        <pubTime>2018-01-12T01:27:55.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://walkline.wang/2018/01/16/Coding-Python-with-VSCode/</loc>
     <lastmod>2018-01-16T16:23:35.901Z</lastmod>
     <data>
@@ -14,23 +31,6 @@
         <tag>python</tag>
          
         <tag>vscode</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://walkline.wang/2018/01/12/learning-linux/</loc>
-    <lastmod>2018-01-15T02:16:52.704Z</lastmod>
-    <data>
-        <display>
-        <title>Linux从入门到放弃</title>
-        <pubTime>2018-01-12T01:27:55.000Z</pubTime>
-        
-        <tag>linux</tag>
          
          
            
