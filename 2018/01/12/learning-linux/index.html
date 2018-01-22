@@ -14,7 +14,7 @@
 <meta property="og:description" content="&amp;#x5728;&amp;#x653E;&amp;#x5F03;&amp;#x4E4B;&amp;#x524D;&amp;#x7528;&amp;#x5230;&amp;#x54EA;&amp;#x5B66;&amp;#x5230;&amp;#x54EA;&amp;#x5C31;&amp;#x8BB0;&amp;#x5F55;&amp;#x5230;&amp;#x54EA;&amp;#xFF0C;&amp;#x6392;&amp;#x540D;&amp;#x4E0D;&amp;#x5206;&amp;#x5148;&amp;#x540E;">
 <meta property="og:image" content="http://walkline.wang/2018/01/12/learning-linux/title.jpg">
 <meta property="og:image" content="http://walkline.wang/2018/01/12/learning-linux/01.png">
-<meta property="og:updated_time" content="2018-01-22T02:01:59.540Z">
+<meta property="og:updated_time" content="2018-01-22T02:22:24.869Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux从入门到放弃">
 <meta name="twitter:description" content="&amp;#x5728;&amp;#x653E;&amp;#x5F03;&amp;#x4E4B;&amp;#x524D;&amp;#x7528;&amp;#x5230;&amp;#x54EA;&amp;#x5B66;&amp;#x5230;&amp;#x54EA;&amp;#x5C31;&amp;#x8BB0;&amp;#x5F55;&amp;#x5230;&amp;#x54EA;&amp;#xFF0C;&amp;#x6392;&amp;#x540D;&amp;#x4E0D;&amp;#x5206;&amp;#x5148;&amp;#x540E;">
@@ -361,16 +361,16 @@ root@ThinkPad:~#
 <pre><code>** (appstreamcli:970): CRITICAL **: Error while moving old database out of the way.
 AppStream cache update failed.
 </code></pre><p>&#x5219;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;</p>
-<pre><code>chmod 777 /var/cache/app-info/xapian/default -R
+<pre><code>root@ThinkPad:~# chmod 777 /var/cache/app-info/xapian/default -R
 </code></pre><h3 id="3&#x3001;&#x4F7F;&#x7528;Samba&#x8FDB;&#x884C;&#x5C40;&#x57DF;&#x7F51;&#x5171;&#x4EAB;"><a href="#3&#x3001;&#x4F7F;&#x7528;Samba&#x8FDB;&#x884C;&#x5C40;&#x57DF;&#x7F51;&#x5171;&#x4EAB;" class="headerlink" title="3&#x3001;&#x4F7F;&#x7528;Samba&#x8FDB;&#x884C;&#x5C40;&#x57DF;&#x7F51;&#x5171;&#x4EAB;"></a><strong>3&#x3001;&#x4F7F;&#x7528;Samba&#x8FDB;&#x884C;&#x5C40;&#x57DF;&#x7F51;&#x5171;&#x4EAB;</strong></h3><blockquote>
 <p>&#x76EE;&#x6807;&#xFF1A;&#x8BA9;Windows&#x8BBF;&#x95EE;Linux&#x7528;&#x6237;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x7684;public&#x6587;&#x4EF6;&#x5939;</p>
 </blockquote>
-<h4 id="&#x5B89;&#x88C5;Samba"><a href="#&#x5B89;&#x88C5;Samba" class="headerlink" title="&#x5B89;&#x88C5;Samba"></a>&#x5B89;&#x88C5;Samba</h4><pre><code>sudo apt update &amp;&amp; upgrade -y
-sudo apt install samba
+<h4 id="&#x5B89;&#x88C5;Samba"><a href="#&#x5B89;&#x88C5;Samba" class="headerlink" title="&#x5B89;&#x88C5;Samba"></a>&#x5B89;&#x88C5;Samba</h4><pre><code>root@ThinkPad:~# sudo apt update &amp;&amp; upgrade -y
+root@ThinkPad:~# sudo apt install samba
 </code></pre><h4 id="&#x914D;&#x7F6E;Samba"><a href="#&#x914D;&#x7F6E;Samba" class="headerlink" title="&#x914D;&#x7F6E;Samba"></a>&#x914D;&#x7F6E;Samba</h4><ul>
 <li>&#x4FEE;&#x6539;Samba&#x914D;&#x7F6E;&#x6587;&#x4EF6;smb.conf</li>
 </ul>
-<pre><code>sudo vim /etc/samba/smb.conf
+<pre><code>root@ThinkPad:~# sudo vim /etc/samba/smb.conf
 </code></pre><ul>
 <li>&#x5728;&#x6587;&#x4EF6;&#x6700;&#x540E;&#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF0C;&#x8BBE;&#x7F6E;/home/pi/public&#x4E3A;&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#x5939;</li>
 </ul>
@@ -385,9 +385,9 @@ sudo apt install samba
 </code></pre><ul>
 <li>&#x91CD;&#x542F;Samba&#x670D;&#x52A1;&#xFF0C;&#x8BA9;&#x914D;&#x7F6E;&#x751F;&#x6548;</li>
 </ul>
-<pre><code>sudo samba restart
+<pre><code>root@ThinkPad:~# sudo samba restart
 </code></pre><h4 id="&#x8BBE;&#x7F6E;Linux&#x6587;&#x4EF6;&#x5939;&#x6743;&#x9650;"><a href="#&#x8BBE;&#x7F6E;Linux&#x6587;&#x4EF6;&#x5939;&#x6743;&#x9650;" class="headerlink" title="&#x8BBE;&#x7F6E;Linux&#x6587;&#x4EF6;&#x5939;&#x6743;&#x9650;"></a>&#x8BBE;&#x7F6E;Linux&#x6587;&#x4EF6;&#x5939;&#x6743;&#x9650;</h4><p>&#x7ED9;Samba&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BBE;&#x7F6E;&#x8FC7;&#x6743;&#x9650;&#x540E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x7ED9;&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#x5939;&#x8BBE;&#x7F6E;&#x76F8;&#x540C;&#x7684;&#x6743;&#x9650;</p>
-<pre><code>sudo chomod -R 777 /home/pi/public
+<pre><code>root@ThinkPad:~# sudo chomod -R 777 /home/pi/public
 </code></pre>
       	
 	      <br />
